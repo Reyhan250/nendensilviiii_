@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nendensilviiiii</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Georgia', serif;
+            font-size: 3.5em;
+            text-align: center;
+            z-index: 1;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            font-family: 'Georgia', serif;
+            font-size: 1.4em;
+            text-align: center;
+            z-index: 1;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .love {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: float 5s infinite;
+        }
+
+        .love:before,
+        .love:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .love:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .love:after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes drift {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> TO NENDEN SILVI</h1>
+    <p>
+        “Di setiap momen sulit, ingatlah bahwa kamu tidak sendirian. Aku di sini untukmu, siap mendengarkan dan memberikan dukungan. Mungkin saat ini terasa berat, tetapi jangan lupakan semua pencapaian yang telah kamu raih. Kamu memiliki banyak hal positif dalam dirimu, dan kamu mampu mewujudkan lebih banyak hal lagi. Jadi, hadapi hari-hari sulit ini dengan kepala tegak, dan ingatlah bahwa setiap tantangan adalah langkah menuju kesuksesan.”.
+    </p>
+
+    <!-- Tambahan Musik -->
+    <audio autoplay loop>
+        <source src="c:\Users\dell\Desktop\WEBSITE REYHAN MISBAHUL\Bunga Abadi - Rio Clappy (Cover by Weswey).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const numHearts = 50;
+
+        for (let i = 0; i < numHearts; i++) {
+            const love = document.createElement('div');
+            love.classList.add('love');
+            love.style.left = `${Math.random() * 100}vw`;
+            love.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            love.style.opacity = Math.random();
+            love.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+
+            document.body.appendChild(love);
+        }
+    </script>
+</body>
+</html>
